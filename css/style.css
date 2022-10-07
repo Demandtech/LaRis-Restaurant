@@ -90,6 +90,7 @@ html {
     align-items: center;
     gap: 10px;
     padding: 20px 0;
+    margin-top: 50px;
 }
 
 .process-box {
@@ -827,4 +828,121 @@ html {
     margin-bottom: 30px;
     margin-right: 20px;
     gap: 5px;
+}
+
+@media(max-width: 426px) {
+    .hero-content {
+    width: 100%;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-header {
+    width: 100%;
+  }
+
+  .about-img {
+    width: 100%;
+  }
+
+    .process-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .deal-card-container {
+    flex-direction: column;
+  }
+
+  .deal-counter {
+    background-color: #eba25d;
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 150px;
+}
+
+.deal-box {
+    align-self: center;
+}
+
+.deal-card{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+#days, #secs, #hours, #mins {
+    font-size: 16px;
+  }
+
+  .res-location-header{
+    flex-direction: column;
+  }
+
+  .res-location-header-box {
+    width: 100%;
+    flex-direction: column;
+  }
+  .location-header-box {
+    width: 100%;
+  }
+
+  .location-header {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .download-container {
+    flex-direction: column-reverse;
+  }
+
+  .download-header{
+    width: 100%;
+  }
+
+  .download-img {
+    width: 100%;
+  }
+
+  .testimony-container {
+    display: none;
+  }
+
+  
+
+  .offer-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .offer-left-wrapper {
+    width: 100%;
+    margin: 0;
+    
+  }
+  .offer-right-wrapper {
+    width: 100%;
+  }
+
+  .download-wrapper {
+    height: 100px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
+
+.download-wrapper img {
+    width: 100px;
+    height: 100%;
+}
+
+
 }
