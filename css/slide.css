@@ -3,11 +3,6 @@
     margin-bottom: 40px;
 }
 
-/* .swiper-wrapper {
-
- 
-} */
-
 .swiper-pagination-bullet {
     width: 20px;
     height: 20px;
@@ -55,12 +50,4 @@
     background-color: #eba25d !important;
 }
 
-/* .slide-item:nth-child(1) {
-  background: url(../img/slide-bg1.jpeg) center no-repeat;
-}
-.slide-item:nth-child(2) {
-  background-image: url(../img/slide-bg2.jpeg) !important;
-}
-.slide-item:nth-child(3) {
-  background-image: url(../img/slide-bg3.jpeg);
-} */
+

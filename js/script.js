@@ -1,13 +1,29 @@
-// Hamburger
+'use strict'
 
+const headerContainer = document.querySelector('.header')
 const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+const navbar = document.querySelector(".navbar");
 let navLinks = document.getElementsByClassName("nav-link");
 
-hamburger.addEventListener("click", mobileMenu)
+//Fixed on scroll;
+const hero = document.querySelector(".hero");
+const headerHeight = headerContainer.getBoundingClientRect().height;
+console.log(headerHeight);
+const fixedheader = function(entries) {
+    const [entry] = entries;
+    if(!entry.isIntersecting) headerContainer.classList.add('fixed-header')
+    else headerContainer.classList.remove("fixed-header");
+}
 
+const heroObserver = new IntersectionObserver(fixedheader,{
+    root: null,
+    threshold: 0,
+    rootMargin: `-${headerHeight}px`
+})
 
+heroObserver.observe(hero)
 
+//Hambuger
 function navBar() {
   
   for(let i = 0; i < navLinks.length; i++){
@@ -17,7 +33,7 @@ function navBar() {
     this.className += " active1"
     // to close the nav on click, it remove the second active class
     hamburger.classList.remove("active2");
-    navMenu.classList.remove("active2");
+    navbar.classList.remove("active2");
    })
   }
  
@@ -28,8 +44,10 @@ navBar()
 
 function mobileMenu() {
     hamburger.classList.toggle("active2");
-    navMenu.classList.toggle("active2");
+    navbar.classList.toggle("active2");
 }
+
+hamburger.addEventListener("click", mobileMenu);
 
 let countDownDate = new Date("Jan 5, 2024 15:00:00");
 let secInterval = setInterval(function() {
@@ -43,11 +61,11 @@ let secInterval = setInterval(function() {
 
    const day = document.getElementById("days")
    const hour = document.getElementById("hours");
-   const mins = document.getElementById("mins");
+   const mins = document.getElementById("mins")  
    const sec = document.getElementById("secs");
 
-   day.textContent = days;
    sec.textContent = seconds;
+   day.textContent = days;
    mins.textContent = minutes;
    hour.textContent = hours
    if(distance < 0) {
